@@ -24,3 +24,40 @@
     transform: translateX(-100%); 
   }
 }
+
+/* warning css */
+body {
+  margin: 0;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.moving-box {
+  position: absolute;
+  padding: 10px 20px;
+  background-color: #70aef1;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+  font-weight: 700;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 1s ease;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .moving-box {
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .moving-box {
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 3px;
+  }
+}
+
