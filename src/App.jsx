@@ -3,7 +3,10 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import Login from './Components/Login/Login'
 import Mains from './Mains/Mains';
-// import WarningText from './Components/WarningText';
+import WarningText from './Components/WarningText';
+import { toast } from 'react-toastify';
+
+
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(false);
@@ -19,9 +22,9 @@ function App() {
  const handleSelectedSubject = (subject) =>{  
     const isExist = selectedSubject.find(sub => sub._id == subject._id);
     if(isExist){
-        alert("You already add a subjects");
+      toast.error("You already add a subjects");
     } else{
-      // alert("added a subjects");
+      toast.success("Successfully added a subjects");
       const newSubject = [...selectedSubject,subject];
       setSelectedSubject(newSubject);
     }
@@ -30,8 +33,9 @@ function App() {
   const handleLogin = (id, password) =>{
     if(id === '' && password === ''){
       setLoggedIn(true);
+      toast.success('Successfully Login');
     } else{
-      alert("invalid credentials");
+      toast.error('invalid credentials');
     }
   }
 
@@ -39,7 +43,7 @@ function App() {
     <>
 
       <div>
-        {/* <WarningText></WarningText> */}
+        <WarningText></WarningText>
         {
           isLoggedIn ?<Mains subjects={subjects}
           handleSelectedSubject={handleSelectedSubject}

@@ -2,13 +2,13 @@ import { useState } from "react";
 import Teacher from "../Components/Teacher/Teacher";
 import Home from "../Components/Home/Home";
 import EvaluationCourse from "../Components/EvaluationCourse/EvaluationCourse";
-import Evaluation from "../Components/Evaluation/Evaluation";
+// import Evaluation from "../Components/Evaluation/Evaluation";
 import Preregistration from "../Components/Preregistration/Preregistration";
 import Schedule from "../Components/Schedule/Schedule";
 import Billing from "../Components/Billing/Billing";
-import { Result } from "postcss";
 import Profile from "../Components/Profile/Profile";
 import Logout from "../Components/Logout/Logout";
+import Results from "../Components/Result/Results";
 
 const Mains = ({subjects,handleSelectedSubject,selectedSubject}) => {
   const [isActive, setIsActive] = useState({
@@ -32,11 +32,11 @@ const Mains = ({subjects,handleSelectedSubject,selectedSubject}) => {
     Home: <Home></Home>,
     Teacher: <Teacher />,
     EvaluationCourse: <EvaluationCourse />,
-    Evaluation: <Evaluation />,
+    // Evaluation: <Evaluation />,
     Preregistration: <Preregistration subjects={subjects} handleSelectedSubject={handleSelectedSubject} />,
     Schedule: <Schedule selectedSubject={selectedSubject} />,
     Billing: <Billing />,
-    Result: <Result />,
+    Result: <Results />,
     Profile: <Profile />,
     Logout: <Logout />,
   };
@@ -52,12 +52,12 @@ const Mains = ({subjects,handleSelectedSubject,selectedSubject}) => {
           />
         </div>
         <div>
-          <div className="flex flex-wrap h-12 items-center justify-center text-center gap-1 text-[12px] lg:text-[16px] lg:w-[810px] lg:h-[44px] bg-[#0099cc] nunito text-white lg:font-bold lg:gap-2">
+          <div className="flex flex-wrap h-12 items-center justify-center text-center gap-1 text-[12px] lg:text-[16px] lg:w-[810px] lg:h-[44px] bg-[#0099cc] nunito text-white lg:font-bold lg:gap-3">
             {[
               "Home",
               "Teacher",
               "EvaluationCourse",
-              "Evaluation",
+            //   "Evaluation",
               "Preregistration",
               "Schedule",
               "Billing",

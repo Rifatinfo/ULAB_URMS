@@ -1,4 +1,8 @@
+import { toast } from "react-toastify";
+
 const Preregistration = ({subjects,handleSelectedSubject}) => {
+    const notify = () => toast.success("Successfully Pre-advising Complete");
+    // const notify3 = () => toast.success("Successfully Added A Subject");
   return (
     <div>
       <div>
@@ -46,6 +50,7 @@ const Preregistration = ({subjects,handleSelectedSubject}) => {
             {/* <!-- Swap Off (Visible when not checked) --> */}
             <div className="swap-off block peer-checked:hidden">
               <img
+              onClick={notify}
                 className="w-4 h-4"
                 src="https://cdn-icons-png.flaticon.com/512/1828/1828665.png"
                 alt="Unchecked"
@@ -106,7 +111,7 @@ const Preregistration = ({subjects,handleSelectedSubject}) => {
                               </div>
                               {/* <!-- Swap Off (Visible when not checked) --> */}
                               <div className="swap-off block peer-checked:hidden">
-                                  <img onClick={() => handleSelectedSubject(subject)} className="w-4 h-4" src={subject.taken_close} alt="Unchecked"/>
+                                  <img onClick={() => {handleSelectedSubject(subject);notify3()}} className="w-4 h-4" src={subject.taken_close} alt="Unchecked"/>
                               </div>
                               </label>
                               </td>
@@ -150,7 +155,7 @@ const Preregistration = ({subjects,handleSelectedSubject}) => {
             <p className="text-gray-400 text-center">Click here to add retake courses</p>
         </div>
         <div className="border  lg:w-[810px] lg:h-[30px] lg:mt-[44px] bg-[#89c4eefa] lg:flex lg:justify-center lg:items-center">
-            <p className="text-center text-black text-[10px] lg:text-sm">System developed by : <span className="font-semibold">Developer Md Rifat Hossain</span></p>
+            <p className="text-center text-black text-[10px] lg:text-sm">System Clone by : <span className="font-semibold">Developer Md Rifat Hossain</span></p>
         </div>
     </div>
   );

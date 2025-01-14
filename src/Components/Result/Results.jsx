@@ -1,11 +1,10 @@
 
-const Profile = () => {
+const Results = () => {
     return (
         <div>
-            <div>
         <div>
           <div className="text-center">
-            <p className="text-center mt-4 text-xl font-bold">Profile</p>
+            <p className="text-center mt-4 text-xl font-bold">Result</p>
             <div className="mt-4">
               <div className="flex gap-3 justify-center">
                 <p>
@@ -42,8 +41,7 @@ const Profile = () => {
               <p className="text-center text-black text-[10px] lg:text-sm">System Clone by : <span className="font-semibold">Developer Md Rifat Hossain</span></p>
           </div>
       </div>
-        </div>
     );
 };
 
-export default Profile;
+export default Results;
