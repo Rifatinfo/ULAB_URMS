@@ -1,8 +1,9 @@
+// import Mains from "../../Mains/Mains";
 
 const Home = () => {
     return (
         <div>
-            <h1>Home</h1>
+            {/* <Mains></Mains> */}
         </div>
     );
 };
