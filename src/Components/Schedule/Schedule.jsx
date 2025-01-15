@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 
 const Schedule = ({selectedSubject}) => {
-      const notify = () => toast("Great, Advising Complete");
+      const notify = () => toast.success("Great, Advising Complete");
       const notify2 = () => toast("Successfully Selected This Subject");
     const [selectedData, setSelectedData] = useState([]);
   const [selectedScheduleAppend, setSelectedScheduleAppend] = useState([]);

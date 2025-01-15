@@ -24,7 +24,7 @@ function App() {
     if(isExist){
       toast.error("You already add a subjects");
     } else{
-      toast.success("Successfully added a subjects");
+      toast("Successfully added a subjects");
       const newSubject = [...selectedSubject,subject];
       setSelectedSubject(newSubject);
     }
